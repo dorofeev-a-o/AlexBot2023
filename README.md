@@ -5,7 +5,7 @@ from telegram.ext import CallbackContext
 from telegram.ext import Filters
 
 import logging
-TOKEN = "6444850628:AAHhHLnDi5e43Jruh6c72xejk5otZOaD8fk"
+
 
 logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(name)s: %(message)s',
