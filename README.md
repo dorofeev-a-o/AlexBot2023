@@ -8,13 +8,14 @@ from telegram.ext import Filters
 
 import logging
 
-TOKEN =
+TOKEN = 
 
 logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(name)s: %(message)s',
     level=logging.INFO
 )
 logger = logging.getLogger(__name__)
+
 
 def main():
     updater = Updater(token=TOKEN)
@@ -64,9 +65,8 @@ def do_start(update: Update, context: CallbackContext):
             '/inline_keyboard',
             "<B>Жирный</B>"]
     text = '\n'.join(text)
-    #context.bot.send_message(user_id, text)
+    # context.bot.send_message(user_id, text)
     update.message.reply_text(text, parse_mode=ParseMode.HTML)
-
 
 
 def do_keyboard(update: Update, context: CallbackContext):
@@ -116,12 +116,13 @@ def keyboard_react(update: Update, context: CallbackContext):
     keyboard_buttons = [[InlineKeyboardButton(text=text, callback_data=text) for text in row] for row in buttons]
     keyboard = InlineKeyboardMarkup(keyboard_buttons)
     text = 'Выбери другую опцию на клавиатуре'
-    query.edit_message_text(
-        text,
-        reply_markup=keyboard
-    )
-
+    query.edit_message_text(text, reply_markup=keyboard)
+def set_timer(update: Update, contaxt: CallbackContext):
+    user_id = update.effective_user.id
+    context_bot.data["messeg_id"]
+    contest.bot_data =
 
 if __name__ == '__main__':
     main()
- 
+
+
