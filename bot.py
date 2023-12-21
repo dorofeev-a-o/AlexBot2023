@@ -9,8 +9,9 @@ from telegram.ext import Filters
 from fun import register_handler
 import logging
 import datetime
+import Token
 
-TOKEN = "6444850628:AAGc1IL0DSK6SdhZqszFnGdbHRAGFPKQlX0"
+TOKEN = Token.token
 
 logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(name)s: %(message)s',
